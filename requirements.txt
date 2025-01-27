@@ -1,0 +1,11 @@
+requests
+pandas
+numpy
+matplotlib
+plotly
+transformers
+torch
+tensorflow
+flask
+langchain
+python-dotenv

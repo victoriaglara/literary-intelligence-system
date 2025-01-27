@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações de Livros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .book {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .book:last-child {
+            border-bottom: none;
+        }
+        .book-title {
+            font-size: 1.2em;
+            color: #007BFF;
+        }
+        .book-author {
+            color: #555;
+        }
+        .book-description {
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recomendações de Livros</h1>
+        {% for book in recommendations %}
+        <div class="book">
+            <div class="book-title">{{ book.title }}</div>
+            <div class="book-author">Autor(es): {{ book.authors }}</div>
+            <div class="book-description">{{ book.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
